@@ -1,0 +1,56 @@
+<html>
+<head>
+  <style>
+  .back {
+      background-color:#FF0000;
+      }
+  </style>
+  <title>Happy Holi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<!--center><button type="button" class="btn btn-danger" id="disp">CLICK ME!</button></center-->
+<div class="container" id="con">
+          <img src="banner.gif" id="img_banner" align="left" style="display:block;width:70%"></img><br>
+    <center>
+      <img src="bucket.png" id="bucket" style="display:block"></img>
+<img src="g_b.gif" id="img_gb" style="display:none;width:70%"></img>
+<img src="MFUN.png" id="mf" style="display:none"></img>
+<img src="balloon2.png" id="b2" style="display:none;width:60%;height:60%"></img>
+<img src="boom.gif" id="boom" style="display:none;width:100%;height:100%"></img>
+<img src="boy_b.gif" id="img_boy" style="display:none;width:80%;height:80%;" ></img>
+<img src="holi_1.gif" id="holi1" style="display:none"></img>
+</center>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#bucket').click(function(){
+	        document.getElementById('img_gb').style.display='block';
+          document.getElementById('img_banner').style.display='none';
+          document.getElementById('bucket').style.display='none';
+          document.getElementById('mf').style.display='block';
+          document.body.style.backgroundImage="url('g_b.gif')";
+	    });
+  $('#mf').click(function(){
+        document.getElementById('mf').style.display='none';
+        document.body.style.backgroundImage="url(' ')";
+        document.getElementById('img_gb').style.display='none';
+        document.getElementById('b2').style.display='block';
+     });
+  $('#b2').on('click',function(){
+          document.getElementById('b2').style.display='none';
+          document.getElementById('boom').style.display='block';
+          $("#boom").delay(500).hide(100);
+          document.getElementById('img_boy').style.display='block';
+          $("#img_boy").delay(3000).hide(300);
+          //document.getElementById('holi1').style.display='block';
+          $("#holi1").delay(3000).show(300);
+    });
+});
+</script>
+</body>
+</html>
